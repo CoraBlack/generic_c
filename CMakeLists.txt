@@ -1,0 +1,27 @@
+cmake_minimum_required(VERSION 3.20)
+
+project(generic_c)
+
+
+set(LANGUAGE ASM C)
+set(C_STANDARD 11)
+set(C_STANDARD_REQUIRED ON)
+set(C_EXTENSIONS OFF)
+
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(LIBRARY_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src/include)
+
+
+file(GLOB_RECURSE SOURCES
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/*.s
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/*.asm
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/*.c
+)
+
+
+add_library(${PROJECT_NAME} STATIC ${SOURCES})

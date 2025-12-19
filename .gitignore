@@ -1,0 +1,7 @@
+# Temporary files
+.cache/
+bin/
+build/
+
+# IDE and editor file
+.vscode/
