@@ -1,0 +1,20 @@
+{
+    "$schema": "https://corablack.github.io/cxon_schema/cxon.schema.json",
+    "project": "generic_c",
+    "target_type": "static_lib",
+    "output_dir": "bin",
+    "toolchain": "gnu",
+
+    "cflags": [
+        "-std=c17"
+    ],
+
+    "include": [
+        "./src/include/"
+    ],
+
+    "sources": [
+        "./src/array.c",
+        "./src/vec.c"
+    ]
+}
