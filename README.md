@@ -17,6 +17,15 @@ Currently, the library includes implementations of dynamic arrays (`Vec`) and st
 - Memory-safe operations with bounds checking
 - Simple and consistent API design
 
+## Build
+
+`generic_c` is building by `cxon`, it is a c/c++ build system in rust.   
+You can know more and install it from the repo of [cxon](https://github.com/CoraBlack/cxon)
+```sh
+# Build in your shell with cson
+cson .
+```
+
 ## Usage
 
 To use this library in your project, simply copy the `src/include` directory into your project and include the necessary headers.
